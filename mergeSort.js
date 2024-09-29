@@ -19,12 +19,12 @@ function mergeSort(array = []) {
     let mergedArray = [];
     (function merge() {
         for (let i = 0; i < array.length; i++) {
-            if (!leftSide[0]) {
+            if (leftSide[0] === undefined) {
                 for (const value of rightSide) {
                     mergedArray.push(value);
                 }
                 break;
-            } else if (!rightSide[0]) {
+            } else if (rightSide[0] === undefined) {
                 for (const value of leftSide) {
                     mergedArray.push(value);
                 }
@@ -40,4 +40,4 @@ function mergeSort(array = []) {
     })();
     return mergedArray;
 }
-console.log(mergeSort([3, 2, 1, 13, 8, 5, 0, 1]));
+//console.log(mergeSort([3, 2, 1, 13, 8, 5, 0, 1]));
